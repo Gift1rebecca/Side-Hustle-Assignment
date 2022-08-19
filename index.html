@@ -54,7 +54,7 @@
                          <td class="table table2">CONFIRM PASSWORD</td>
                     </tr>
                     <tr>
-                        <td><input type="password" id="txtPassword"placeholder="Password" class="style password" /><div id = "message" style="color:red;"></div></td>
+                        <td><input type="password" id="txtPassword"placeholder="Password" class="style password" /><div id="message" style="color: red; border-color :2px solid rgba(255,21,21,0.712);"></div></td>
                         <td class="table"><input type="password" id="txtConfirmPassword" placeholder="Confirm Password" class="style password"></td>
                     </tr>
                     </table>
@@ -68,7 +68,7 @@
     </section>
 </body>
 <script type="text/javascript">
-    function Validate() {
+        function Validate() {
         var password = document.getElementById("txtPassword").value;
         var confirmPassword = document.getElementById("txtConfirmPassword").value;
         if (password != confirmPassword){
@@ -76,6 +76,6 @@
             return false;
         }
         return true;
-}
+    }
 </script>
 </html>
