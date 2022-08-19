@@ -12,10 +12,10 @@
 </head>
 
 <body>
-    <section  style="display: flex; justify-content: center;">
-        <div class="img">
+    <section class="flex">
+        <div class="contain">
             <div class="sidebarBody">
-            <img src="odin-lined.png" class="logo"/><span><img src="images (2).jpeg" class="img3"/> </span>
+            <img src="odin-lined.png" class="logo"/><span><img src="images (2).jpeg" class="img3"/></span>
             </div>
         </div>
 
@@ -33,40 +33,49 @@
                     <table>
                         <p class="font font2"><b>Let's do this!</p></b>
                     <tr>
-                        <td> FIRST NAME</td>
-                        <td class="table"> LAST NAME</td>
+                        <td class="table2"> FIRST NAME</td>
+                        <td class="table table2"> LAST NAME</td>
                         <tr>
                             <td>
-                    <input type="text" name="firstname" class="style"></td>
+                    <input type="text" name="firstname" placeholder="First Name" class="style"></td>
                         
-                        <td class="table"><input type="text" name="lastname" class="style"></td><br>
+                        <td class="table"><input type="text" name="lastname" placeholder="Last Name" class="style"></td><br>
                     </tr>
                     <tr>
-                        <td>EMAIL</td>
-                        <td class="table">PHONE NUMBER</td>
+                        <td class="table2">EMAIL</td>
+                        <td class="table table2">PHONE NUMBER</td>
                     </tr>
                     <tr>
-                        <td><input type="email" name="email" class="style"></td>
-                        <td class="table"><input type="tel" name="phonenumber" class="style"></td>
+                        <td><input type="email" name="email" placeholder="Email" class="style"></td>
+                        <td class="table"><input type="number" name="phonenumber"  placeholder="Phone Number" class="style"></td>
                     </tr>
                      <tr>
-                         <td>PASSWORD</td>
-                         <td class="table">CONFIRM PASSWORD</td>
+                         <td class="table2">PASSWORD</td>
+                         <td class="table table2">CONFIRM PASSWORD</td>
                     </tr>
                     <tr>
-                        <td><input type="text" name="password" class="style"></td>
-                        <td class="table"><input type="text" name="confirmpassword" class="style"></td>
+                        <td><input type="password" id="txtPassword"placeholder="Password" class="style password" /><div id = "message" style="color:red;"></div></td>
+                        <td class="table"><input type="password" id="txtConfirmPassword" placeholder="Confirm Password" class="style password"></td>
                     </tr>
-                </table>
-                </div><br>
-                    <input type="submit" value="Create Account" class="style2 font" >
-            </form>
+                    </table>
+                    </div><br>
+                    <input type="submit" value="Create Account" class="style2 font" onclick="return Validate()">
+                </form>
                 <p class="space font"><strong>
                     Already have an account? <a href="#" class="a">Log in</a></strong>
                 </p>
-                            </div>
-            
-        
+            </div>
     </section>
 </body>
+<script type="text/javascript">
+    function Validate() {
+        var password = document.getElementById("txtPassword").value;
+        var confirmPassword = document.getElementById("txtConfirmPassword").value;
+        if (password != confirmPassword){
+            document.getElementById("message").innerHTML = "*Passwords do not match.";
+            return false;
+        }
+        return true;
+}
+</script>
 </html>
