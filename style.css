@@ -89,7 +89,7 @@ input:focus.password{
         color: rgba(11, 56, 11, 0.801); text-decoration: none;
 }
 
-@media (max-width:756px) {
+@media (max-width:768px) {
         .flex {
                 max-width: 100%;
                 display: flex;
@@ -115,7 +115,7 @@ input:focus.password{
         }
 }
 
-@media (min-width:756px) {
+@media (min-width:768px) {
         .flex {
                 max-width: 100%;
                 display: flex;
@@ -134,3 +134,39 @@ input:focus.password{
                 width:0;
         }
 }
+
+@media (max-width:480px) {
+        .flex {
+                max-width: 100%;
+                display: flex;
+        }
+        .contain{
+                width: 100%;
+        }
+        .sidebarBody{
+                height:80px;
+                margin-top: 225px;
+        }
+        .logo {
+                height: 50px;
+                width: 30px;
+        }
+        .img3{
+                height: 50px;
+                width: 30px;
+        }
+        .style{
+                width:100%;
+        }
+        form .color .style4{
+                width:100%;
+        }
+        form .table .table2{
+                max-height:900px;
+                overflow:scroll;
+        }
+        .contain .table .table2::-webkit-scrollbar{
+                width:100%;
+        }
+}
+
